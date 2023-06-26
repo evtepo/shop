@@ -258,7 +258,7 @@ section#home {
   width: 1000px;
   border-radius: 40px;
   margin-top: 20px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -280,17 +280,17 @@ section#home {
   border-radius: 10px;
   font-size: 25px;
   font-weight: 700;
-  background: #191c29;
+  background: white;
   position: relative;
   align-items: center;
-  display: flex;
-  color: white;
+  color: black;
   cursor: pointer;
   left: 10px;
+  transition: all 0.8s ease;
 }
 
 .card:hover {
-  color: rgb(88 199 250 / 100%);
+  color: #d689fa;
   transition: color 1s;
 }
 
@@ -305,13 +305,14 @@ section#home {
   width: 104%;
   height: 102%;
   border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), black,
-  white);
+  background-image: linear-gradient(var(--rotate), hsla(326, 67%, 74%, 1),
+      white);
   position: absolute;
   z-index: -1;
   top: -1%;
   left: -2%;
   animation: spin 2.5s linear infinite;
+  transition: all 0.8s ease;
 }
 
 .card::after {
@@ -325,50 +326,59 @@ section#home {
   width: 100%;
   margin: 0 auto;
   transform: scale(0.8);
-  background-image: linear-gradient(var(--rotate), black,
-  white);
   opacity: 1;
   transition: opacity .5s;
   animation: spin 2.5s linear infinite;
 }
 
-  @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-
-    100% {
-      --rotate: 360deg;
-    }
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
   }
 
-.card .img_flowers {
-  width: 550px;
-  height: 550px;
-  overflow: hidden;
-  margin: 10px;
-  border-radius: 100%;
-  box-shadow: 2px 2px 5px pink;
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.card h4 {
+  position: relative;
+  text-align: center;
+  bottom: 20px;
+}
+
+.card img {
+  position: relative;
+  height: 240px;
+  width: 240px;
+  border-radius: 10px;
+  text-align: center;
+  left: 10px;
+  bottom: 20px;
+}
+
+.card .desc {
+  position: relative;
+  text-align: center;
+  bottom: 60px;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.card .price {
+  position: absolute;
+  text-align: left;
+  bottom: 0;
+  font-size: 23px;
 }
 
 .text-center {
   margin-top: 30px;
 }
 
-.text-center a {
-  color: white;
-  font-size: 25px;
-  background-color: #191c29;
-  border-radius: 30px;
-  padding: 9px 12px 9px 12px;
-  text-decoration: none
+.card:nth-child(n + 6) {
+  display: none;
 }
-
-.text-center a:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
-
 
 /*---------------------------------------
       OUR_FLOWERS              
@@ -504,7 +514,7 @@ footer .section-title {
   position: absolute;
   width: 300px;
   height: 400px;
-  text-align: justify;
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -564,7 +574,7 @@ footer .section-title {
   position: absolute;
   width: 300px;
   height: 400px;
-  text-align: justify;
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -619,7 +629,7 @@ footer .section-title {
   position: absolute;
   width: 300px;
   height: 400px;
-  text-align: justify;
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -674,7 +684,7 @@ footer .section-title {
   position: absolute;
   width: 300px;
   height: 400px;
-  text-align: justify;
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 20px;

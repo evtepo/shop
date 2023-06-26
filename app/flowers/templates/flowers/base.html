@@ -148,18 +148,14 @@
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <h4>{{ p.title }}</h4>
-                        <br>{{ p.description }}<br>
-                        Цена - {{ p.price }}
+                        <p><img src="{{ p.image.url }}" alt="p.title"></p>
+                        <br><div class="desc">{{ p.description }}</div>
+                        <div class="price">Цена - {{ p.price }}</div>
                     </div>
                 </div>
                 {% endif %}
                 {% endfor %}
             </div>
-        </div>
-        <div class="text-center">
-            <a class="cl-btn" href="#">
-                Показать еще
-            </a>
         </div>
     </section>
     <!-- LOCATION -->
@@ -205,8 +201,7 @@
     <script src="{% static 'flowers/js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'flowers/js/smoothscroll.js' %}"></script>
     <script src="{% static 'flowers/js/custom.js' %}"></script>
-    <script src="{% static 'flowers/js/button.js' %}"></script>   
-    <script src="{% static 'flowers/js/showmore.js' %}"></script>   
+    <script src="{% static 'flowers/js/button.js' %}"></script>    
 </body>
 
 </html>
