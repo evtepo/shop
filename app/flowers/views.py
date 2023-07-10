@@ -9,7 +9,7 @@ from .utils import DataMixin
 
 class FlowersList(DataMixin, ListView):
     model = Flowers
-    template_name = "flowers/base.html"
+    template_name = "flowers/index.html"
     context_object_name = "posts"
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -19,3 +19,18 @@ class FlowersList(DataMixin, ListView):
 
     def get_queryset(self):
         return Flowers.objects.all().select_related("category")
+
+
+class CompositionsList(ListView):
+    paginate_by = 6
+    model = Flowers
+    template_name = 'flowers/compositions.html'
+    context_object_name = 'compositions'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Композиции'
+        return context
+  
+    def get_queryset(self):
+        return Flowers.objects.all().filter(category__title='Композиции')

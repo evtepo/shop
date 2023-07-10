@@ -33,6 +33,8 @@ body {
     radial-gradient(at 0% 100%, hsla(343, 0%, 97%, 1) 0px, transparent 50%);
   font-family: Arial;
   font-family: 'Amatic SC', cursive;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 /*---------------------------------------
@@ -49,6 +51,7 @@ h6 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   font-size: 30px;
+  color: black;
 }
 
 h1 {
@@ -81,6 +84,14 @@ p {
   line-height: 24px;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  transition: all 0.5s ease;
+}
+
 /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
@@ -92,7 +103,7 @@ p {
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #C1C8E4;
+  background: skyblue;
 }
 
 section {
@@ -100,13 +111,12 @@ section {
   padding: 100px 0;
 }
 
-
 /*---------------------------------------
       MENU              
   -----------------------------------------*/
 
 .custom-navbar {
-  background: #1c1b1b;
+  background: black;
   border-top: 5px solid black;
   border-bottom: 0;
   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -152,21 +162,23 @@ section {
 .custom-navbar .navbar-nav.navbar-nav-first {
   margin-left: 3em;
   font-size: 27px;
+  font-weight: 700;
 }
 
 .custom-navbar .navbar-nav.navbar-nav-first li a {
-  color: #d689fa;
+  color: skyblue;
 }
 
 .custom-navbar .navbar-nav.navbar-right li a {
   padding-right: 12px;
   padding-left: 12px;
   font-size: 27px;
-  color: #d689fa;
+  font-weight: 700;
+  color: skyblue;
 }
 
 .custom-navbar .navbar-nav.navbar-right li a .fa {
-  color: #d689fa;
+  color: lawngreen;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -261,132 +273,502 @@ section#home {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+/*---------------------------------------
+       FIRST CARD CAROUSEL FOR FLOWERS           
+    -----------------------------------------*/
+
+.slider1 {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.item1 {
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  height: 386px;
+  text-align: center;
+  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.5s ease;
+  left: calc(50% - 150px);
+  margin-top: 40px;
+  padding-bottom: -20px;
+  top: 0;
+  cursor: pointer;
+}
+
+.item1:hover {
+  box-shadow: inset rgb(189, 124, 235) 0 0 40px 1px,
+    rgb(174, 89, 234) 0 0 24px 1px;
+}
+
+.item1 h4 {
+  font-size: 20;
+  text-align: center;
+}
+
+.item1 img {
+  width: 260px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+}
+
+.item1:hover img {
+  transform: scale(1.02);
+}
+
+#next1,
+#prev1 {
+  position: absolute;
+  top: 40%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 350px;
+}
+
+#next1 {
+  left: unset;
+  right: 350px;
+}
 
 /*---------------------------------------
-      WORKS  -  Copyright (c) 2023 by Gayane Gasparyan (https://codepen.io/gayane-gasparyan/pen/jOmaBQK)              
-  -----------------------------------------*/
+           SECOND CARD CAROUSEL FOR FLOWERS           
+        -----------------------------------------*/
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-.card {
-  width: 300px;
-  height: 400px;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  font-size: 25px;
-  font-weight: 700;
-  background: white;
+.slider2 {
   position: relative;
-  align-items: center;
-  color: black;
-  cursor: pointer;
-  left: 10px;
-  transition: all 0.8s ease;
-}
-
-.card:hover {
-  color: #d689fa;
-  transition: color 1s;
-}
-
-.card:hover:before,
-.card:hover:after {
-  animation: none;
-  opacity: 0;
-}
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), hsla(326, 67%, 74%, 1),
-      white);
-  position: absolute;
-  z-index: -1;
-  top: -1%;
-  left: -2%;
-  animation: spin 2.5s linear infinite;
-  transition: all 0.8s ease;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
   width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
+  height: 450px;
+  overflow: hidden;
 }
 
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-
-  100% {
-    --rotate: 360deg;
-  }
-}
-
-.card h4 {
-  position: relative;
+.item2 {
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  height: 386px;
   text-align: center;
-  bottom: 20px;
-}
-
-.card img {
-  position: relative;
-  height: 240px;
-  width: 240px;
+  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
   border-radius: 10px;
-  text-align: center;
-  left: 10px;
-  bottom: 20px;
+  padding: 20px;
+  transition: all 0.5s ease;
+  left: calc(50% - 150px);
+  margin-top: 40px;
+  padding-bottom: -20px;
+  top: 0;
+  cursor: pointer;
 }
 
-.card .desc {
+.item2:hover {
+  box-shadow: inset rgb(189, 124, 235) 0 0 40px 1px,
+    rgb(174, 89, 234) 0 0 24px 1px;
+}
+
+.item2 img {
+  width: 260px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+}
+
+.item2:hover img {
+  transform: scale(1.02);
+}
+
+#next2,
+#prev2 {
+  position: absolute;
+  top: 40%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 350px;
+}
+
+#next2 {
+  left: unset;
+  right: 350px;
+}
+
+/*---------------------------------------
+           THIRD CARD CAROUSEL FOR FLOWERS           
+        -----------------------------------------*/
+
+.slider3 {
   position: relative;
-  text-align: center;
-  bottom: 60px;
-  font-size: 23px;
-  line-height: 1;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
 }
 
-.card .price {
+.item3 {
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  height: 386px;
+  text-align: center;
+  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.5s ease;
+  left: calc(50% - 150px);
+  margin-top: 40px;
+  padding-bottom: -20px;
+  top: 0;
+  cursor: pointer;
+}
+
+.item3:hover {
+  box-shadow: inset rgb(189, 124, 235) 0 0 40px 1px,
+    rgb(174, 89, 234) 0 0 24px 1px;
+}
+
+.item3 p {
+  position: relative;
+  font-size: 20px;
+  line-height: 0.8;
+  font-weight: 700;
+  bottom: 10px;
+}
+
+.item3 img {
+  width: 260px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+}
+
+.item3:hover img {
+  transform: scale(1.02);
+}
+
+#next3,
+#prev3 {
+  position: absolute;
+  top: 40%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 350px;
+}
+
+#next3 {
+  left: unset;
+  right: 350px;
+}
+
+/*---------------------------------------
+           FOURTH CARD CAROUSEL FOR FLOWERS           
+        -----------------------------------------*/
+
+.slider4 {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.item4 {
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  height: 386px;
+  text-align: center;
+  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.5s ease;
+  left: calc(50% - 150px);
+  margin-top: 40px;
+  padding-bottom: -20px;
+  top: 0;
+  cursor: pointer;
+}
+
+.item4:hover {
+  box-shadow: inset rgb(189, 124, 235) 0 0 40px 1px,
+    rgb(174, 89, 234) 0 0 24px 1px;
+}
+
+.item4:hover img {
+  transform: scale(1.02);
+}
+
+.item4 img {
+  width: 260px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+}
+
+#next4,
+#prev4 {
+  position: absolute;
+  top: 40%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 350px;
+}
+
+#next4 {
+  left: unset;
+  right: 350px;
+}
+
+.price {
   position: absolute;
   text-align: left;
-  bottom: 0;
-  font-size: 23px;
+  bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  transition: all 0.5 ease;
 }
-
-.text-center {
-  margin-top: 30px;
-}
-
-.card:nth-child(n + 6) {
-  display: none;
-}
-
-/*---------------------------------------
-      OUR_FLOWERS              
-  -----------------------------------------*/
 
 .nameofflowers {
   text-align: center;
   margin: auto;
+  color: black;
+  transition: all 0.5 ease;
+}
+
+/* Copyright (c) 2023 by Yuhomyan (https://codepen.io/yuhomyan/pen/OJMejWJ) */
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 700;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn {
+  background-color: #f0ecfc;
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn span {
+  color: black;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #c797eb;
+  transition: all 0.5s ease;
+}
+
+.btn:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn:hover:before {
+  height: 100%;
+}
+
+.btn:hover:after {
+  width: 100%;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn span:hover {
+  color: black;
+}
+
+.btn span:before,
+.btn span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #c797eb;
+  transition: all 0.5s ease;
+}
+
+.btn span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn span:after {
+  height: 2px;
+  width: 0%;
+}
+
+.btn span:hover:before {
+  height: 100%;
+}
+
+.btn span:hover:after {
+  width: 100%;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+/*---------------------------------------
+       WORKS AND COMPOSITIONS
+    -----------------------------------------*/
+
+.compositions {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  padding-top: 30px;
+}
+
+.compositions-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 50px;
+}
+
+.compositions-item {
+  display: inline-block;
+  text-align: center;
+  width: 340px;
+  height: 430px;
+  border-radius: 20px;
+  position: relative;
+  padding: 10px;
+  left: calc(50% - 170px);
+  margin-bottom: 60px;
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, .5),
+    0px 0px 5px 5px rgba(0, 0, 0, .1),
+    0px 0px 5px 5px rgba(0, 0, 0, .1);
+  border: 0.1px solid rgba(255, 255, 255, .5);
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+.compositions-item:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, .5),
+    0px 0px 15px 15px rgba(0, 0, 0, .1),
+    0px 0px 15px 15px rgba(0, 0, 0, .1);
+}
+
+.compositions-title {
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  height: 40px;
+  width: 340px;
+  bottom: 11px;
+  right: 11px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.1px solid rgba(255, 255, 255, .5);
+  transition: all 0.7s ease;
+}
+
+.compositions-item:hover .compositions-title {
+  color: black;
+}
+
+.compositions-img img {
+  height: 275px;
+  width: 275px;
+  border-radius: 20px;
+}
+
+.compositions-description {
+  position: relative;
+  top: 5px;
+  text-align: center;
+  height: 50px;
+  width: 320px;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.7s ease;
+  line-height: 1;
+}
+
+.compositions-item:hover .compositions-description {
+  color: black;
+}
+
+.compositions-price {
+  top: 20px;
+  right: 100px;
+  height: 20px;
+  width: 320px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.7s ease;
+}
+
+.compositions-item:hover .compositions-price {
+  color: black;
 }
 
 /*---------------------------------------
@@ -439,7 +821,6 @@ footer .section-title {
 
 .social-icon li a {
   border-radius: 100px;
-  color: #d689fa;
   font-size: 15px;
   width: 35px;
   height: 35px;
@@ -451,13 +832,29 @@ footer .section-title {
   margin: 5px 5px 5px 0;
 }
 
-.social-icon li a:hover {
-  background: #d689fa;
-  color: white;
+.social-icon .fa-whatsapp {
+  color: lawngreen;
 }
 
+.social-icon .fa-telegram {
+  color: skyblue;
+}
+
+.social-icon .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icon .fa-envelope {
+  color: red;
+}
+
+.social-icon li a:hover {}
+
 /*---------------------------------------
-       BUTTON            
+       BUTTON ON TOP
     -----------------------------------------*/
 
 .btn-up {
@@ -500,226 +897,45 @@ footer .section-title {
 }
 
 /*---------------------------------------
-       FIRST CARD CAROUSEL FOR FLOWERS           
+       PAGINATION
     -----------------------------------------*/
 
-.slider1 {
-  position: relative;
+.pag .container {
   width: 100%;
-  height: 450px;
-  overflow: hidden;
-}
-
-.item1 {
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 150px);
-  top: 0;
-}
-
-.item1 p {
-  font-size: 21px;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.item1 h4 {
-  font-size: 20;
-  text-align: center;
-}
-
-.item1 img {
-  width: 260px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
-}
-
-#next1,
-#prev1 {
-  position: absolute;
-  top: 40%;
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: xx-large;
-  font-family: monospace;
-  font-weight: bold;
-  left: 350px;
-}
-
-#next1 {
-  left: unset;
-  right: 350px;
-}
-
-/*---------------------------------------
-       SECOND CARD CAROUSEL FOR FLOWERS           
-    -----------------------------------------*/
-
-.slider2 {
+  max-width: 940px;
+  margin: 0 auto;
   position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-}
-
-.item2 {
-  position: absolute;
-  width: 300px;
-  height: 400px;
   text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 150px);
-  top: 0;
 }
 
-.item2 p {
-  font-size: 21px;
-  line-height: 1;
+.pagination {
+  padding: 30px 0;
+}
+
+.pagination ul {
+  font-size: 25px;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.item2 img {
-  width: 260px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+.pagination a {
+  display: inline-block;
+  padding: 10px 18px;
+  color: #222;
 }
 
-#next2,
-#prev2 {
-  position: absolute;
-  top: 40%;
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: xx-large;
-  font-family: monospace;
-  font-weight: bold;
-  left: 350px;
-}
-
-#next2 {
-  left: unset;
-  right: 350px;
-}
-
-/*---------------------------------------
-       THIRD CARD CAROUSEL FOR FLOWERS           
-    -----------------------------------------*/
-
-.slider3 {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-}
-
-.item3 {
-  position: absolute;
-  width: 300px;
-  height: 400px;
+.pa a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
   text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 150px);
-  top: 0;
 }
 
-.item3 p {
-  font-size: 21px;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.item3 img {
-  width: 260px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
-}
-
-#next3,
-#prev3 {
-  position: absolute;
-  top: 40%;
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: xx-large;
-  font-family: monospace;
-  font-weight: bold;
-  left: 350px;
-}
-
-#next3 {
-  left: unset;
-  right: 350px;
-}
-
-/*---------------------------------------
-       FOURTH CARD CAROUSEL FOR FLOWERS           
-    -----------------------------------------*/
-
-.slider4 {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-}
-
-.item4 {
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 150px);
-  top: 0;
-}
-
-.item4 p {
-  font-size: 21px;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.item4 img {
-  width: 260px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
-}
-
-#next4,
-#prev4 {
-  position: absolute;
-  top: 40%;
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: xx-large;
-  font-family: monospace;
-  font-weight: bold;
-  left: 350px;
-}
-
-#next4 {
-  left: unset;
-  right: 350px;
+.pa a.is-active {
+  background-color: skyblue;
+  border-radius: 100%;
+  color: #fff;
 }

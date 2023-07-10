@@ -1,0 +1,143 @@
+{% extends "flowers/base.html" %}
+{% load static %}
+
+{% block main %}
+<!-- HOME -->
+<section id="home">
+    <div class="container">
+        <h2 class="funny-title title">Дарите радость и любовь с нашими уникальными букетами</h2>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<div class="cont">
+    <p class="about_us">
+        Наша флористическая компания – это место, где каждый может ощутить на себе магию прекрасного,
+        «закружиться» в известном «Вальсе цветов». На ваших глазах, из каких то невзрачных бледных и мелких
+        цветочков, кусочков ткани разной фактуры, и вообще не поддающихся описанию не понятных предметов вдруг
+        рождается чудо, нежное, трогательное, неповторимое.
+    </p>
+    <img src="{% static 'flowers/images/place.jpg' %}" alt="place">
+</div>
+
+<!-- OURFLOWERS -->
+<section id="typesofflowers">
+    <div class="container">
+        <div class="row">
+            <div class="nameofflowers">
+                <h3>Ассортимент нашей компании</h3><br>
+                <div class="nameofflowers">
+                    <h4>Привозные цветы</h4>
+                </div>
+                <div class="slider1">
+                    {% for i in imported_flowers %}
+                    <div class="item1">
+                        <img src="{{ i.image.url }}" alt="{{ i.title }}">
+                        <h4>{{ i.title }}</h4>
+                        <div class="price">Цена: {{ i.price }} шт.</div>
+                    </div>
+                    {% endfor %}
+                    <button id="next1">></button>
+                    <button id="prev1"><</button>
+                </div>
+            </div>
+            <div class="nameofflowers">
+                <h4>Домашние цветы</h4>
+            </div>
+            <div class="slider2">
+                {% for h in homemade %}
+                <div class="item2">
+                    <img src="{{ h.image.url }}" alt="{{ h.title }}">
+                    <h4>{{ h.title }}</h4>
+                    <div class="price">Цена: {{ h.price }} шт.</div>
+                </div>
+                {% endfor %}
+                <button id="next2">></button>
+                <button id="prev2"><</button>
+            </div>
+            <div class="nameofflowers">
+                <h4>Мыльные композиции</h4>
+            </div>
+            <div class="slider3">
+                {% for s in soap %}
+                <div class="item3">
+                    <img src="{{ s.image.url }}" alt="{{ s.title }}">
+                    <h4>{{ s.title }}</h4>
+                    <p>{{ s.description }}</p>
+                    <div class="price">Цена: {{ s.price }}</div>
+                </div>
+                {% endfor %}
+                <button id="next3">></button>
+                <button id="prev3"><</button>
+            </div>
+            <div class="nameofflowers">
+                <h4>Комнатные растения</h4>
+            </div>
+            <div class="slider4">
+                {% for h in homemade %}
+                <div class="item4">
+                    <img src="{{ h.image.url }}" alt="{{ h.title }}">
+                    <h4>{{ h.title }}</h4>
+                    <div class="price">Цена: {{ h.price }} шт.</div>
+                </div>
+                {% endfor %}
+                <button id="next4">></button>
+                <button id="prev4"><</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+    <div class="nameofflowers">
+        <h3>Наши работы</h3>
+    </div>
+    <div class="row">
+        <div class="compositions-body">
+            {% for c in compositions %}
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="compositions-item">
+                    <div class="compositions-title">
+                        {{ c.title }}
+                    </div>
+                    <div class="compositions-img">
+                        <img src="{{ c.image.url }}" alt="">
+                    </div>
+                    <div class="compositions-description">
+                        {{ c.description }}
+                    </div>
+                    <div class="compositions-price">
+                        Цена: {{ c.price }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="frame">
+        <button class="custom-btn btn">
+            <a href="{% url 'compositions' %}"><span>Показать еще</span></a>
+        </button>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+    <div class="cantainer">
+        <div class="loc">
+            <h4>Наше местоположение</h4>
+        </div>
+        <div class="ourlocation">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d514.8913513778099!2d132.35364279730933!3d43.11154768470475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3c2cd2ce37a87%3A0x1f3464eeaa3c1aa2!2z0KHQu9Cw0LLRj9C9!5e0!3m2!1sru!2sru!4v1685716521327!5m2!1sru!2sru"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+<div class="btn-up btn-up_hide"></div>
+
+{% endblock main %}

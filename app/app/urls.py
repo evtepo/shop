@@ -25,6 +25,7 @@ from flowers.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", FlowersList.as_view(), name="home"),
+    path("compositions/", CompositionsList.as_view(), name="compositions")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
