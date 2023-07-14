@@ -281,16 +281,16 @@ section#home {
   position: relative;
   width: 100%;
   height: 450px;
-  overflow: hidden;
 }
 
 .item1 {
-  background-color: white;
+  background-color: rgb(247, 204, 240);
   position: absolute;
   width: 300px;
   height: 386px;
   text-align: center;
-  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  box-shadow: inset rgb(189, 124, 235) 0 0 5px 1px,
+    rgb(174, 89, 234) 0 0 3px 1px;
   border-radius: 10px;
   padding: 20px;
   transition: all 0.5s ease;
@@ -315,7 +315,8 @@ section#home {
   width: 260px;
   height: 250px;
   border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+  box-shadow: inset rgb(71, 59, 80) 0 0 5px 1px,
+    rgb(71, 59, 80) 0 0 3px 1px;
 }
 
 .item1:hover img {
@@ -332,12 +333,12 @@ section#home {
   font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
-  left: 350px;
+  left: 0px;
 }
 
 #next1 {
   left: unset;
-  right: 350px;
+  right: 0px;
 }
 
 /*---------------------------------------
@@ -348,16 +349,16 @@ section#home {
   position: relative;
   width: 100%;
   height: 450px;
-  overflow: hidden;
 }
 
 .item2 {
-  background-color: white;
+  background-color: rgb(247, 204, 240);
   position: absolute;
   width: 300px;
   height: 386px;
   text-align: center;
-  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  box-shadow: inset rgb(189, 124, 235) 0 0 5px 1px,
+    rgb(174, 89, 234) 0 0 3px 1px;
   border-radius: 10px;
   padding: 20px;
   transition: all 0.5s ease;
@@ -377,7 +378,8 @@ section#home {
   width: 260px;
   height: 250px;
   border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+  box-shadow: inset rgb(71, 59, 80) 0 0 5px 1px,
+    rgb(71, 59, 80) 0 0 3px 1px;
 }
 
 .item2:hover img {
@@ -394,12 +396,12 @@ section#home {
   font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
-  left: 350px;
+  left: 0px;
 }
 
 #next2 {
   left: unset;
-  right: 350px;
+  right: 0px;
 }
 
 /*---------------------------------------
@@ -410,16 +412,16 @@ section#home {
   position: relative;
   width: 100%;
   height: 450px;
-  overflow: hidden;
 }
 
 .item3 {
-  background-color: white;
+  background-color: rgb(247, 204, 240);
   position: absolute;
   width: 300px;
   height: 386px;
   text-align: center;
-  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  box-shadow: inset rgb(189, 124, 235) 0 0 5px 1px,
+    rgb(174, 89, 234) 0 0 3px 1px;
   border-radius: 10px;
   padding: 20px;
   transition: all 0.5s ease;
@@ -447,7 +449,8 @@ section#home {
   width: 260px;
   height: 250px;
   border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+  box-shadow: inset rgb(71, 59, 80) 0 0 5px 1px,
+    rgb(71, 59, 80) 0 0 3px 1px;
 }
 
 .item3:hover img {
@@ -464,12 +467,12 @@ section#home {
   font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
-  left: 350px;
+  left: 0px;
 }
 
 #next3 {
   left: unset;
-  right: 350px;
+  right: 0px;
 }
 
 /*---------------------------------------
@@ -480,16 +483,16 @@ section#home {
   position: relative;
   width: 100%;
   height: 450px;
-  overflow: hidden;
 }
 
 .item4 {
-  background-color: white;
+  background-color: rgb(247, 204, 240);
   position: absolute;
   width: 300px;
   height: 386px;
   text-align: center;
-  border: 0.1px solid 0 0 25px rgb(83, 94, 104);
+  box-shadow: inset rgb(189, 124, 235) 0 0 5px 1px,
+    rgb(174, 89, 234) 0 0 3px 1px;
   border-radius: 10px;
   padding: 20px;
   transition: all 0.5s ease;
@@ -513,7 +516,8 @@ section#home {
   width: 260px;
   height: 250px;
   border-radius: 10px;
-  box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+  box-shadow: inset rgb(71, 59, 80) 0 0 5px 1px,
+    rgb(71, 59, 80) 0 0 3px 1px;
 }
 
 #next4,
@@ -526,12 +530,12 @@ section#home {
   font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
-  left: 350px;
+  left: 0px;
 }
 
 #next4 {
   left: unset;
-  right: 350px;
+  right: 0px;
 }
 
 .price {
@@ -631,7 +635,7 @@ button {
 }
 
 .btn span:hover {
-  color: black;
+  color: white;
 }
 
 .btn span:before,
@@ -722,10 +726,9 @@ button {
   width: 340px;
   bottom: 11px;
   right: 11px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border: 0.1px solid rgba(255, 255, 255, .5);
+  border-bottom: 0.1px solid rgba(255, 255, 255, .5);
   transition: all 0.7s ease;
+  padding-top: 3px;
 }
 
 .compositions-item:hover .compositions-title {
@@ -756,15 +759,22 @@ button {
 }
 
 .compositions-price {
+  position: relative;
   top: 20px;
-  right: 100px;
+  border: 1px solid rgba(255, 255, 255, .5);
   height: 20px;
-  width: 320px;
+  width: 100px;
   color: white;
   font-size: 20px;
   font-weight: 700;
-  position: relative;
   transition: all 0.7s ease;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  left: calc(50% - 50px);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, .5),
+  0px 0px 3px 3px rgba(0, 0, 0, .1),
+  0px 0px 3px 3px rgba(0, 0, 0, .1);
 }
 
 .compositions-item:hover .compositions-price {
