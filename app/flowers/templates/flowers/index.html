@@ -33,11 +33,13 @@
                     </div>
                     <div class="slider1">
                         {% for i in imported_flowers %}
-                        <div class="item1">
-                            <img src="{{ i.image.url }}" alt="{{ i.title }}">
-                            <h4>{{ i.title }}</h4>
-                            <div class="price">Цена: {{ i.price }} шт.</div>
-                        </div>
+                        <a href="{{ i.image.url }}" data-fancybox>
+                            <div class="item1">
+                                <img src="{{ i.image.url }}" alt="{{ i.title }}">
+                                <h4>{{ i.title }}</h4>
+                                <div class="price">Цена: {{ i.price }} шт.</div>
+                            </div>
+                        </a>
                         {% endfor %}
                         <button id="next1">></button>
                         <button id="prev1"><</button>
@@ -50,11 +52,13 @@
                 </div>
                 <div class="slider2">
                     {% for h in homemade %}
-                    <div class="item2">
-                        <img src="{{ h.image.url }}" alt="{{ h.title }}">
-                        <h4>{{ h.title }}</h4>
-                        <div class="price">Цена: {{ h.price }} шт.</div>
-                    </div>
+                    <a href="{{ h.image.url }}" data-fancybox>
+                        <div class="item2">
+                            <img src="{{ h.image.url }}" alt="{{ h.title }}">
+                            <h4>{{ h.title }}</h4>
+                            <div class="price">Цена: {{ h.price }} шт.</div>
+                        </div>
+                    </a>
                     {% endfor %}
                     <button id="next2">></button>
                     <button id="prev2"><</button>
@@ -67,12 +71,14 @@
                 </div>
                 <div class="slider3">
                     {% for s in soap %}
-                    <div class="item3">
-                        <img src="{{ s.image.url }}" alt="{{ s.title }}">
-                        <h4>{{ s.title }}</h4>
-                        <p>{{ s.description }}</p>
-                        <div class="price">Цена: {{ s.price }}</div>
-                    </div>
+                    <a href="{{ s.image.url }}" data-fancybox>
+                        <div class="item3">
+                            <img src="{{ s.image.url }}" alt="{{ s.title }}">
+                            <h4>{{ s.title }}</h4>
+                            <p>{{ s.description }}</p>
+                            <div class="price">Цена: {{ s.price }}</div>
+                        </div>
+                    </a>
                     {% endfor %}
                     <button id="next3">></button>
                     <button id="prev3"><</button>
@@ -84,11 +90,13 @@
                 </div>
                 <div class="slider4">
                     {% for h in homemade %}
-                    <div class="item4">
-                        <img src="{{ h.image.url }}" alt="{{ h.title }}">
-                        <h4>{{ h.title }}</h4>
-                        <div class="price">Цена: {{ h.price }} шт.</div>
-                    </div>
+                    <a href="{{ h.image.url }}" data-fancybox>
+                        <div class="item4">
+                            <img src="{{ h.image.url }}" alt="{{ h.title }}">
+                            <h4>{{ h.title }}</h4>
+                            <div class="price">Цена: {{ h.price }} шт.</div>
+                        </div>
+                    </a>
                     {% endfor %}
                     <button id="next4">></button>
                     <button id="prev4"><</button>
@@ -107,20 +115,22 @@
         <div class="compositions-body">
             {% for c in compositions %}
             <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <div class="compositions-item">
-                    <div class="compositions-title">
-                        {{ c.title }}
+                <a href="{{ c.image.url }}" data-fancybox>
+                    <div class="compositions-item">
+                        <div class="compositions-title">
+                            {{ c.title }}
+                        </div>
+                        <div class="compositions-img">
+                            <img src="{{ c.image.url }}" alt="">
+                        </div>
+                        <div class="compositions-description">
+                            {{ c.description }}
+                        </div>
+                        <div class="compositions-price">
+                            Цена: {{ c.price }}
+                        </div>
                     </div>
-                    <div class="compositions-img">
-                        <img src="{{ c.image.url }}" alt="">
-                    </div>
-                    <div class="compositions-description">
-                        {{ c.description }}
-                    </div>
-                    <div class="compositions-price">
-                        Цена: {{ c.price }}
-                    </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
         </div>

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="{% static 'flowers/images/logo.ico' %}" type="image/x-icon" />
     <link rel="stylesheet" href="{% static 'flowers/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'flowers/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'flowers/css/templatemo-style.css' %}">
     <title>{{ title }}</title>
@@ -45,21 +46,23 @@
         <div class="row">
             <div class="compositions-body">
                 {% for c in compositions %}
-                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">              
-                        <div class="compositions-item">
-                            <div class="compositions-title">
-                                {{ c.title }}
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <a href="{{ c.image.url }}" data-fancybox>              
+                            <div class="compositions-item">
+                                <div class="compositions-title">
+                                    {{ c.title }}
+                                </div>
+                                <div class="compositions-img">
+                                    <img src="{{ c.image.url }}" alt="composition">
+                                </div>
+                                <div class="compositions-description">
+                                    {{ c.description }}
+                                </div>
+                                <div class="compositions-price">
+                                    Цена: {{ c.price }}
+                                </div>
                             </div>
-                            <div class="compositions-img">
-                                <img src="{{ c.image.url }}" alt="composition">
-                            </div>
-                            <div class="compositions-description">
-                                {{ c.description }}
-                            </div>
-                            <div class="compositions-price">
-                                Цена: {{ c.price }}
-                            </div>
-                        </div>                   
+                        </a>
                     </div>
                 {% endfor %}
             </div>
@@ -119,14 +122,14 @@
 
     <!-- SCRIPTS -->
     <script src="{% static 'flowers/js/card.js' %}"></script>
-    <script src="{% static 'flowers/js/jquery.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'flowers/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'flowers/js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'flowers/js/smoothscroll.js' %}"></script>
-    <script src="{% static 'flowers/js/custom.js' %}"></script>
     <script src="{% static 'flowers/js/button.js' %}"></script>
-    <script src="{% static 'flowers/js/works.js' %}"></script>
-
+    <script src="{% static 'flowers/js/smoothScroll.js' %}"></script>
+    <script src="{% static 'flowers/js/toTop.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>  
 </body>
 
 </html>

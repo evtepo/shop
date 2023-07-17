@@ -224,6 +224,7 @@ section {
   -----------------------------------------*/
 
 h2.funny-title {
+  position: relative;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   font-size: 30px;
@@ -233,6 +234,7 @@ h2.funny-title {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 3px;
+  border-radius: 8px;
 }
 
 section#home {
@@ -241,8 +243,6 @@ section#home {
 
 .title {
   color: black;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 /*---------------------------------------
@@ -860,8 +860,6 @@ footer .section-title {
 .social-icon .fa-envelope {
   color: red;
 }
-
-.social-icon li a:hover {}
 
 /*---------------------------------------
        BUTTON ON TOP
