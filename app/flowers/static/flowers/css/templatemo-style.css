@@ -33,7 +33,7 @@ body {
     radial-gradient(at 0% 100%, hsla(343, 0%, 97%, 1) 0px, transparent 50%);
   font-family: Arial;
   font-family: 'Amatic SC', cursive;
-  width: 100%;
+  width: auto;
   background-repeat: no-repeat;
 }
 
@@ -116,7 +116,7 @@ section {
   -----------------------------------------*/
 
 .custom-navbar {
-  background: black;
+  background: #222324;
   border-top: 5px solid black;
   border-bottom: 0;
   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -127,6 +127,7 @@ section {
   padding: 0;
   font-family: Arial;
   font-family: 'Amatic SC', cursive;
+  height: 80px;
 }
 
 .custom-navbar .navbar-brand {
@@ -156,6 +157,7 @@ section {
   line-height: 40px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  filter: drop-shadow(0 0 0.75rem rgb(174, 16, 174));
 }
 
 
@@ -163,10 +165,21 @@ section {
   margin-left: 3em;
   font-size: 27px;
   font-weight: 700;
+  height: min-content;
+  margin-top: 10px;
 }
 
 .custom-navbar .navbar-nav.navbar-nav-first li a {
   color: skyblue;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.custom-navbar .navbar-nav.navbar-right {
+  position: relative;
+  height: 10px;
+  margin-top: 7px;
+  display: inline-block;
 }
 
 .custom-navbar .navbar-nav.navbar-right li a {
@@ -179,20 +192,17 @@ section {
 
 .custom-navbar .navbar-nav.navbar-right li a .fa {
   color: lawngreen;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   line-height: 30px;
   text-align: center;
   display: inline-block;
   margin-right: 5px;
   transition: all 0.8s ease;
+  
 }
 
 .custom-navbar .nav li a {
-  line-height: 40px;
-  color: #575757;
-  padding-right: 22px;
-  padding-left: 22px;
   transition: all 0.8s ease;
 }
 
@@ -201,18 +211,19 @@ section {
   background-color: transparent;
 }
 
-.custom-navbar .nav li a:hover {
-  background-color: #d689fa;
-  color: #ffffff;
+.custom-navbar .navbar-nav-first li a:hover {
+  background-color: skyblue;
+  color: black;
+  filter: drop-shadow(0 0 1rem skyblue);
+}
+
+.custom-navbar .navbar-right li a:hover {
+  color: #fff;
 }
 
 .custom-navbar .nav li.active>a {
-  background-color: #d689fa;
-  color: #ffffff;
-}
-
-.custom-navbar .nav li a:hover .fa {
-  color: #ffffff;
+  background-color: skyblue;
+  color: black;
 }
 
 .custom-navbar .nav li.active>a .fa {
@@ -229,12 +240,11 @@ h2.funny-title {
   border-bottom: 3px solid black;
   font-size: 30px;
   text-align: center;
-  text-transform: uppercase;
   font-family: Arial;
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 3px;
-  border-radius: 8px;
+  padding-top: 8px;
 }
 
 section#home {
@@ -284,7 +294,7 @@ section#home {
 }
 
 .item1 {
-  background-color: rgb(247, 204, 240);
+  background-color: white;
   position: absolute;
   width: 300px;
   height: 386px;
@@ -352,7 +362,7 @@ section#home {
 }
 
 .item2 {
-  background-color: rgb(247, 204, 240);
+  background-color: white;
   position: absolute;
   width: 300px;
   height: 386px;
@@ -415,7 +425,7 @@ section#home {
 }
 
 .item3 {
-  background-color: rgb(247, 204, 240);
+  background-color: white;
   position: absolute;
   width: 300px;
   height: 386px;
@@ -486,7 +496,7 @@ section#home {
 }
 
 .item4 {
-  background-color: rgb(247, 204, 240);
+  background-color: white;
   position: absolute;
   width: 300px;
   height: 386px;
@@ -555,6 +565,18 @@ section#home {
   transition: all 0.5 ease;
 }
 
+.nameofflowers p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  height: 15px;
+  padding-bottom: 50px;
+}
+
+.nameofflowers h4 {
+  height: 5px;
+}
+
 /* Copyright (c) 2023 by Yuhomyan (https://codepen.io/yuhomyan/pen/OJMejWJ) */
 
 .frame {
@@ -564,7 +586,7 @@ section#home {
 }
 
 button {
-  margin: 20px;
+  margin-bottom: 50px;
 }
 
 .custom-btn {
@@ -773,8 +795,8 @@ button {
   left: calc(50% - 50px);
   border-radius: 10px;
   box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, .5),
-  0px 0px 3px 3px rgba(0, 0, 0, .1),
-  0px 0px 3px 3px rgba(0, 0, 0, .1);
+    0px 0px 3px 3px rgba(0, 0, 0, .1),
+    0px 0px 3px 3px rgba(0, 0, 0, .1);
 }
 
 .compositions-item:hover .compositions-price {
@@ -790,8 +812,17 @@ button {
 }
 
 .loc {
+  margin-top: -100px;
   text-align: center;
   color: black;
+  padding-bottom: 30px;
+}
+
+.loc p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  height: 15px;
 }
 
 /*---------------------------------------
@@ -799,18 +830,17 @@ button {
     -----------------------------------------*/
 
 footer {
-  background: black;
+  background: #222324;
   padding: 40px 0;
   text-align: center;
 }
 
 footer .section-title {
   font-family: Arial;
-  font-family: 'Amatic SC', cursive;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   padding-bottom: 10px;
-  color: whitesmoke;
+  color: #959799;
 }
 
 /*---------------------------------------
@@ -846,8 +876,16 @@ footer .section-title {
   color: lawngreen;
 }
 
+.social-icon .fa-whatsapp:hover {
+  filter: drop-shadow(0 0 0.75rem lawngreen);
+}
+
 .social-icon .fa-telegram {
   color: skyblue;
+}
+
+.social-icon .fa-telegram:hover {
+  filter: drop-shadow(0 0 0.75rem skyblue);
 }
 
 .social-icon .fa-instagram {
@@ -857,8 +895,16 @@ footer .section-title {
   -webkit-text-fill-color: transparent;
 }
 
+.social-icon .fa-instagram:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(230, 241, 108));
+}
+
 .social-icon .fa-envelope {
   color: red;
+}
+
+.social-icon .fa-envelope:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(240, 36, 36));
 }
 
 /*---------------------------------------
