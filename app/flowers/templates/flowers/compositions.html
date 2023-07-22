@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'flowers/css/templatemo-style.css' %}">
+    <link rel="stylesheet" href="{% static 'flowers/css/Large_Devices.css' %}">
+    <link rel="stylesheet" href="{% static 'flowers/css/Medium_Devices.css' %}">
+    <link rel="stylesheet" href="{% static 'flowers/css/Small_Devices.css' %}">
+    <link rel="stylesheet" href="{% static 'flowers/css/Extra_Small_Devices.css' %}">
+    <link rel="stylesheet" href="{% static 'flowers/css/Custom.css' %}">
     <title>{{ title }}</title>
 </head>
 
@@ -20,7 +25,7 @@
 
     <!-- MENU -->
     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-        <div class="container">
+
             <div class="navbar-header">
                 <!-- lOGO TEXT HERE -->
                 <a href="{% url 'home' %}" class="navbar-brand">· Laguta · F L O W E R S</a>
@@ -36,12 +41,12 @@
                     <li><a href="tel:+79510040040"><i class="fa fa-phone"></i>+7 951 004-00-40</a></li>
                 </ul>
             </div>
-        </div>
+
     </section>
 
     <div class="works">
         <div class="compositions">
-            Наши работы
+            <h3>Наши работы</h3>
         </div>
         <div class="row">
             <div class="compositions-body">
@@ -106,7 +111,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    Здесь будет заголовк для футера
+                    © 2023 LagutaFlowers
                 </div>
                 <ul class="social-icon">
                     <li><a href="https://api.whatsapp.com/send?phone=89510040040" class="fa fa-whatsapp"></a></li>

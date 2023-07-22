@@ -29,24 +29,26 @@
         <div class="row">
             <div class="nameofflowers">
                 <h3>Ассортимент нашей компании</h3>
-                <p>(Пожалйуста, уточните наличие и цену при заказе)</p>
-                <div class="col-xs-6">   
-                    <div class="nameofflowers">
-                        <h4>Привозные цветы</h4>
-                    </div>
-                    <div class="slider1">
-                        {% for i in imported_flowers %}
-                        <a href="{{ i.image.url }}" data-fancybox>
-                            <div class="item1">
-                                <img src="{{ i.image.url }}" alt="{{ i.title }}">
-                                <h4>{{ i.title }}</h4>
-                                <div class="price">Цена: {{ i.price }} шт.</div>
-                            </div>
-                        </a>
-                        {% endfor %}
-                        <button id="next1">></button>
-                        <button id="prev1"><</button>
-                    </div>
+                <p>(Пожалйуста, уточните наличие и цену при заказе)</p> 
+                </div>  
+            <div class="col-xs-6"> 
+                <div class="nameofflowers">
+                    <h4>Привозные цветы</h4>
+                </div>
+                <div class="slider1">
+                    {% for p in posts %}
+                    {% if p.category.title == 'Привозные цветы' %}
+                    <a href="{{ p.image.url }}" data-fancybox>
+                        <div class="item1">
+                            <img src="{{ p.image.url }}" alt="{{ p.title }}">
+                            <h4>{{ p.title }}</h4>
+                            <div class="price">Цена: {{ p.price }} шт.</div>
+                        </div>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                    <button id="next1">></button>
+                    <button id="prev1"><</button>
                 </div>
             </div>
             <div class="col-xs-6">
@@ -54,14 +56,16 @@
                     <h4>Домашние цветы</h4>
                 </div>
                 <div class="slider2">
-                    {% for h in homemade %}
-                    <a href="{{ h.image.url }}" data-fancybox>
+                    {% for p in posts %}
+                    {% if p.category.title == 'Домашние цветы' %}
+                    <a href="{{ p.image.url }}" data-fancybox>
                         <div class="item2">
-                            <img src="{{ h.image.url }}" alt="{{ h.title }}">
-                            <h4>{{ h.title }}</h4>
-                            <div class="price">Цена: {{ h.price }} шт.</div>
+                            <img src="{{ p.image.url }}" alt="{{ p.title }}">
+                            <h4>{{ p.title }}</h4>
+                            <div class="price">Цена: {{ p.price }} шт.</div>
                         </div>
                     </a>
+                    {% endif %}
                     {% endfor %}
                     <button id="next2">></button>
                     <button id="prev2"><</button>
@@ -73,15 +77,17 @@
                     <h4>Мыльные композиции</h4>
                 </div>
                 <div class="slider3">
-                    {% for s in soap %}
-                    <a href="{{ s.image.url }}" data-fancybox>
+                    {% for p in posts %}
+                    {% if p.category.title == 'Мыльные композиции' %}
+                    <a href="{{ p.image.url }}" data-fancybox>
                         <div class="item3">
-                            <img src="{{ s.image.url }}" alt="{{ s.title }}">
-                            <h4>{{ s.title }}</h4>
-                            <p>{{ s.description }}</p>
-                            <div class="price">Цена: {{ s.price }}</div>
+                            <img src="{{ p.image.url }}" alt="{{ p.title }}">
+                            <h4>{{ p.title }}</h4>
+                            <p>{{ p.description }}</p>
+                            <div class="price">Цена: {{ p.price }}</div>
                         </div>
                     </a>
+                    {% endif %}
                     {% endfor %}
                     <button id="next3">></button>
                     <button id="prev3"><</button>
@@ -92,14 +98,16 @@
                     <h4>Комнатные растения</h4>
                 </div>
                 <div class="slider4">
-                    {% for h in homemade %}
-                    <a href="{{ h.image.url }}" data-fancybox>
+                    {% for p in posts %}
+                    {% if p.category.title == 'Мыльные композиции' %}
+                    <a href="{{ p.image.url }}" data-fancybox>
                         <div class="item4">
-                            <img src="{{ h.image.url }}" alt="{{ h.title }}">
-                            <h4>{{ h.title }}</h4>
-                            <div class="price">Цена: {{ h.price }} шт.</div>
+                            <img src="{{ p.image.url }}" alt="{{ p.title }}">
+                            <h4>{{ p.title }}</h4>
+                            <div class="price">Цена: {{ p.price }} шт.</div>
                         </div>
                     </a>
+                    {% endif %}
                     {% endfor %}
                     <button id="next4">></button>
                     <button id="prev4"><</button>
