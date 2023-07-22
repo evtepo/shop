@@ -18,7 +18,7 @@ class FlowersList(DataMixin, ListView):
         return dict(list(context.items()) + list(context_from_mixin.items()))
 
     def get_queryset(self):
-        return Flowers.objects.all().select_related("category")
+        return Flowers.objects.filter(is_published=True).select_related("category").all()
 
 
 class CompositionsList(ListView):
@@ -33,4 +33,4 @@ class CompositionsList(ListView):
         return context
   
     def get_queryset(self):
-        return Flowers.objects.all().filter(category__title='Композиции')
+        return Flowers.objects.filter(category__title='Композиции', is_published=True).all()
