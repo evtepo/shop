@@ -99,8 +99,8 @@
     }
 
     .cont img {
-        height: 300px;
-        width: 500px;
+        height: 400px;
+        width: 600px;
     }
 
     .nameofflowers p {
@@ -197,7 +197,7 @@
         height: 100%;
         padding-left: 50px;
         padding-right: 50px;
-        padding-top: 25px;
+        padding-top: 35px;
     }
 
     .compositions-item {

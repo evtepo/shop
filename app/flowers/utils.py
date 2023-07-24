@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 from .models import Flowers
 import random
 
@@ -6,7 +6,7 @@ class DataMixin:
     def get_user_context(self, **kwargs):
         context = kwargs
         context['compositions'] = self.get_random_compositions(Flowers.objects.filter(category__title='Композиции', is_published=True).all())
-
+        context['year'] = date.today().year
         return context
     
     def get_random_compositions(self, obj):

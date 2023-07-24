@@ -15,7 +15,7 @@
     }
 
     .container {
-        width: 800px;
+        width: 600px;
     }
 
     section {
@@ -24,7 +24,7 @@
     }
 
     /*---------------------------------------
-  TYPOGRAPHY              
+TYPOGRAPHY              
 -----------------------------------------*/
 
     h1,
@@ -33,20 +33,20 @@
     h4,
     h5,
     h6 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     /*---------------------------------------
-  MENU              
+MENU              
 -----------------------------------------*/
 
     .custom-navbar {
@@ -55,41 +55,41 @@
 
     .custom-navbar .navbar-brand {
         left: 10px;
-        font-size: 20px;
+        font-size: 18px;
         bottom: 10px;
     }
 
     .custom-navbar .navbar-nav.navbar-nav-first {
-        font-size: 23px;
+        font-size: 21px;
         margin-top: 0;
         margin-left: 2em;
         left: 0;
     }
 
     .custom-navbar .navbar-nav.navbar-right {
-        font-size: 23px;
+        font-size: 21px;
         margin-top: 0;
         right: 30px;
         bottom: 3px;
     }
 
     /*---------------------------------------
-  TITLE            
+TITLE            
 -----------------------------------------*/
 
     h2.funny-title {
-        font-size: 25px;
+        font-size: 23px;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
     }
 
     /*---------------------------------------
-  ABOUT_US            
+ABOUT_US            
 -----------------------------------------*/
 
     .about_us {
         position: relative;
-        font-size: 22px;
+        font-size: 20px;
         bottom: 20px;
     }
 
@@ -104,30 +104,30 @@
     }
 
     .nameofflowers p {
-        font-size: 18px;
+        font-size: 16px;
         height: 5px;
         padding-bottom: 10px;
     }
 
     .nameofflowers h4 {
         height: 0px;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .nameofflowers h3 {
-        font-size: 25px;
+        font-size: 23px;
 
     }
 
     /*---------------------------------------
-  CARD CAROUSEL FOR FLOWERS           
+CARD CAROUSEL FOR FLOWERS           
 -----------------------------------------*/
 
     .price {
         position: absolute;
         text-align: left;
         bottom: 6px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .slider1,
@@ -180,15 +180,15 @@
     .item3 p {
         position: relative;
         bottom: 20px;
-        font-size: 15px;
+        font-size: 13px;
     }
 
     /*---------------------------------------
-  WORKS AND COMPOSITIONS
+WORKS AND COMPOSITIONS
 -----------------------------------------*/
 
     .compositions {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
     }
 
@@ -211,7 +211,7 @@
     }
 
     .compositions-title {
-        font-size: 18px;
+        font-size: 16px;
         height: 30px;
         width: 240px;
         bottom: 11px;
@@ -228,7 +228,7 @@
         top: 5px;
         height: 50px;
         width: 200px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         line-height: 1;
         left: 10px;
@@ -238,7 +238,7 @@
         top: 30px;
         height: 20px;
         width: 100px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         padding-bottom: 25px;
         margin-bottom: 10px;
@@ -252,15 +252,15 @@
     }
 
     .custom-btn {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     /*---------------------------------------
-  PAGINATION
+PAGINATION
 -----------------------------------------*/
 
     .pagination ul {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .pa a {
@@ -272,7 +272,7 @@
     }
 
     /*---------------------------------------
-  LOCATION
+LOCATION
 -----------------------------------------*/
 
     .loc {
@@ -280,16 +280,16 @@
     }
 
     .loc h4 {
-        font-size: 24px;
+        font-size: 22px;
         margin-top: 20px;
     }
 
     .loc p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     /*---------------------------------------
-  FOOTER
+FOOTER
 -----------------------------------------*/
 
     footer {

@@ -1,7 +1,6 @@
-from typing import Any, Dict
-from django.db.models.query import QuerySet
-from django.shortcuts import render
 from django.views.generic import ListView
+
+from datetime import date
 
 from .models import *
 from .utils import DataMixin
@@ -30,6 +29,7 @@ class CompositionsList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Композиции'
+        context['year'] = date.today().year
         return context
   
     def get_queryset(self):
