@@ -1,0 +1,3 @@
+exclude_patterns:
+  - "app/flowers/static/flowers/js/"
+  - "app/flowers/migrations/"
